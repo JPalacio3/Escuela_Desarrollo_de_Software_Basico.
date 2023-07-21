@@ -1,0 +1,27 @@
+
+/* Selector Universal es aquel que se usa para afectar a todos los elementos del archivo */
+* {
+color: blue;
+background-color: aqua;
+}
+
+/* Selector de elementos de html, se usa para afectar los elementos específicamente con el nombre de la etiqueta html */
+p {
+color: green;
+}
+h1, h2 {
+    color: red;
+}
+
+/* Uso de clases personalizadas en los elementos del archivo se usa para ser más específico */
+.parrafo_1 {
+    color: blueviolet;
+}
+
+/* Selecotores por id  */
+#titulo1 {
+    background-color:bisque;
+}
+#titulo2 {
+    background-color: rgb(0, 255, 21);
+}

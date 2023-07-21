@@ -1,0 +1,22 @@
+* {
+    background: #F2F2F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Elementos de bloque :  Ocupan todo el ancho de panatalla disponible y el siguiente espacio se posicionará abajo haciendo un salto de línea  */
+h1,
+p,
+div {
+    background-color: #A5A5E5;
+    /* display: block; valor por defecto */
+    display: inline;
+}
+
+/* Elemetos de línea : Ocupan solamente el espacio de su contenido, no hacen saltos de línea y el siguiente elemento se posicionará al lado suyo */
+a {
+    background-color: #A550EA;
+    ;
+    color: #000;
+    /* display: inline; valor por defecto*/
+    display: inline-block;
+}

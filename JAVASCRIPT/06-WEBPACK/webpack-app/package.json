@@ -1,0 +1,30 @@
+{
+  "name": "webpack-app",
+  "version": "1.0.0",
+  "description": "Mi aplicación con webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.product.js",
+    "dev": "webpack --config webpack.config.js",
+    "start": "webpack serve --open"
+  },
+  "keywords": [],
+  "author": "Jpalacio",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.4",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.84.0",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
+  }
+}

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.main {
+    background-color: #71d867;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.caja {
+    width: 500px;
+    height: 200px;
+    margin: 20px;
+}
+
+.img {
+    float: left;
+    width: auto;
+}
+
+.text {
+    float: left;
+}
+
+/* Estilos para articulos */
+
+.articulo {
+    background-color: #53d8dd;
+    width: 500px;
+    margin: auto;
+}
+
+.articulo h2 {
+    text-align: justify;
+}
+
+.articulo img {
+    float: right;
+}

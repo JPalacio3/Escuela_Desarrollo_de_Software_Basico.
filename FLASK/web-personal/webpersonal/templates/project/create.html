@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+
+{% block title %} Poyectos {% endblock%}
+
+{% block content %}
+<h2>Insertar Proyectos</h2>
+
+<!-- Asigamos con el action la función a la que gestionará y realizará el proceso de guardado -->
+<form action="{{ url_for('project.insert') }}" method="POST">
+
+    <label for="title">Título: </label>
+    <input type="text" name="title" id="title"> <br>
+
+    <label for="description">Descripción: </label> <br>
+    <textarea name="description" id="description" cols="50" rows="10"></textarea> <br>
+
+    <input type="submit" value="Guardar">
+
+</form>
+{% endblock %}

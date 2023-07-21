@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.caja {
+    background-color: #0E6BA8;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    /* float: right; */
+}
+
+.position {
+    background-color: #17b308;
+    /* position: relative; */
+    position: absolute;
+    /* position: fixed; */
+    /* left: 210px;
+    /* top: 500px;  */
+    bottom: 0%;
+    right: 0%;
+}
+
+.caja-padre {
+    margin: 20px;
+    background-color: rgb(255, 154, 3);
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+/*
+La posición absoluta y relativa son dos formas de posicionamiento que se pueden aplicar a los elementos en CSS. Aquí te proporciono una definición y algunos ejemplos de uso para cada uno: Posición absoluta: La posición absoluta es un tipo de posicionamiento que permite colocar un elemento en una posición específica en relación a su contenedor padre o al cuerpo (body) de la página si no se especifica un contenedor padre. Los elementos con posición absoluta se eliminan del flujo del documento HTML,
+lo que significa que no afectan la posición de otros elementos en la página. Se puede utilizar las propiedades top,
+bottom,
+left y right para ajustar la posición del elemento en relación a su contenedor padre. Ejemplos de uso: Crear un menú de navegación que se superponga en la parte superior de una imagen de fondo. Crear un botón que aparezca en una posición específica en la página y que se mueva cuando se desplaza el contenido de la página. Crear un pop-up o una ventana emergente que aparezca en una posición específica en la pantalla. Posición relativa: La posición relativa es un tipo de posicionamiento que permite desplazar un elemento desde su posición normal según el flujo del documento HTML. Los elementos con posición relativa no se eliminan del flujo del documento HTML y no afectan la posición de otros elementos en la página. Se puede utilizar las propiedades top,
+bottom,
+left y right para desplazar el elemento desde su posición normal. Ejemplos de uso: Desplazar un elemento hacia la izquierda o hacia la derecha en la página. Ajustar la posición de un elemento en relación a otro elemento en la página. Crear un efecto de animación mediante la transición de la posición de un elemento.
+La propiedad position: fixed; es otra forma de posicionamiento que se puede utilizar en CSS para posicionar un elemento en una ubicación fija en la pantalla, independientemente del desplazamiento de la página. Cuando se aplica position: fixed; a un elemento, el elemento se elimina del flujo normal de la página y se coloca en una posición fija en la pantalla. Esto significa que el elemento permanecerá en la misma posición incluso si se desplaza el contenido de la página.
+*/

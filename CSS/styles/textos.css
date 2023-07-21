@@ -1,0 +1,32 @@
+
+
+* {
+    font-family:'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    color: #222FFF;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    text-transform: lowercase;
+    font-size: large;
+    font-style: oblique;
+    font-weight: 600;
+    text-indent: 40px;
+    line-height: 2.5;
+    text-shadow: 4px 0.5px 10px rgba(0,0,0, 0.651);
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

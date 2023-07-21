@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "849c5194-4130-4a43-98c8-a3a7c74f2b00",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:6969/api",
+    "url": "http://localhost:6969/api/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-05-26T23:11:46.370Z",
+    "modified": "2023-05-27T03:02:18.181Z",
+    "headers": [
+      {
+        "name": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "\n{\n\n\"lastname\": \"Papi\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog con FLASK</title>
+</head>
+
+<body>
+    <h1>Mis Blogs</h1>
+
+    {% for blog in blogs %}
+
+    <h3>{{ blog.titulo }}</h3>
+    <p>{{ blog.desc }}</p>
+
+    {% endfor %}
+
+    <a href="{{ url_for('hola') }}">Página de Inicio</a>
+    
+</body>
+
+</html>

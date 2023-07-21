@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %} Perfil {% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<main class="main-profile">
+    <section class="profile">
+        <div class="profile-img">
+            <img src="{% static 'img/profile-pic.jpg' %}" alt="imagen de perfil">
+        </div>
+        <div class="profile-info">
+            <h2>Hola, mi nombre Joel Palacio</h2>
+            <p>
+                sit amet consectetur adipisicing elit.
+                Molestias esse, qui nisi deserunt animi earum ad rerum
+                modi sunt explicabo minus atque dolorem officia officiis
+                laudantium consequuntur perferendis nesciunt possimus.
+            </p>
+
+            <p> sit amet consectetur adipisicing elit. Tempora, sed expedita? Recusandae similique modi
+                iusto corrupti sit obcaecati veniam error commodi ea qui aliquam, numquam hic aperiam voluptate
+                delectus? Deserunt.
+                Repudiandae vel officia, a eius, eum commodi quae itaque fugiat laboriosam culpa iure quam
+                exercitationem sint veniam molestias iste dicta enim suscipit, quas sequi? Debitis ex nobis reiciendis
+                ut? Perspiciatis!</p>
+            <p>
+                Nihil modi corrupti fugiat nisi, a dolorem consequuntur at vero tempora error placeat eius magni
+                nostrum, iusto impedit excepturi unde itaque voluptate pariatur eveniet veritatis mollitia provident
+                vel. Itaque, ut. consectetur adipisicing elit. Deserunt ipsum blanditiis fugit voluptates, eos amet iste
+                repellat debitis maxime consequatur tenetur corrupti, in ex neque officia. Sit consectetur praesentium
+                laborum!
+            </p>
+
+
+        </div>
+
+    </section>
+
+    <section class="project-container">
+
+        <h3>Proyectos</h3>
+
+        {% for project in projects %}
+        <div class="project">
+            <h4>{{ project.title }}</h4>
+            <p> {{ project.desc }} </p>
+        </div>
+        {% endfor %}
+    </section>
+</main>
+
+{% endblock %}

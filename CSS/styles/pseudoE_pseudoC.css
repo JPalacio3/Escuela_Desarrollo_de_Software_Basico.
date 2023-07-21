@@ -1,0 +1,66 @@
+.menu {
+    background-color: #13A4A4;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 30px;
+}
+.menu-nav {
+    color:red;
+    list-style: none;
+}
+
+.menu-nav__item {
+    display: inline-block;
+}
+
+.menu-nav__item a {
+    color: green;
+    text-decoration: none;
+}
+
+/* pseudo clases: Las pseudoclases son selectores especiales en CSS que permiten seleccionar elementos que se encuentran en un estado específico o que cumplen ciertas condiciones en una página web.
+
+Las pseudoclases se agregan al final del selector y se indican mediante dos puntos (:). Algunas de las pseudoclases más comunes son:
+
+:hover: Selecciona un elemento cuando el cursor del mouse se encuentra sobre él.
+:active: Selecciona un elemento mientras se hace clic en él.
+:visited: Selecciona un enlace que ya ha sido visitado.
+:focus: Selecciona un elemento cuando recibe el enfoque.
+:first-child: Selecciona el primer elemento hijo de un elemento padre.
+:last-child: Selecciona el último elemento hijo de un elemento padre.
+:nth-child(n): Selecciona el elemento hijo que cumple con una expresión de fórmula dada (por ejemplo, :nth-child(2n+1) selecciona todos los elementos impares).
+Las pseudoclases son muy útiles para aplicar estilos específicos a elementos que se encuentran en diferentes estados o situaciones en una página web. Por ejemplo, se puede utilizar la pseudoclase :hover para resaltar un elemento cuando el cursor del mouse está sobre él, o la pseudoclase :visited para cambiar el color de los enlaces que ya han sido visitados. */
+
+.menu-nav__item a:hover {
+    color: #0400ff;
+}
+
+
+.menu-nav__item a:active {
+    color: #7bff00;
+}
+
+
+/* Los pseudoelementos son elementos virtuales que se utilizan en CSS para aplicar estilos a partes específicas de un elemento, sin tener que agregar elementos HTML adicionales. Se identifican mediante dos puntos (::) y se agregan al final de los selectores CSS.
+
+Hay varios tipos de pseudoelementos, los más comunes son:
+
+::before: Este pseudoelemento se utiliza para agregar contenido antes del contenido del elemento seleccionado. Por ejemplo, se puede agregar una flecha antes de un enlace.
+
+::after: Este pseudoelemento se utiliza para agregar contenido después del contenido del elemento seleccionado. Por ejemplo, se puede agregar un ícono de descarga después de un botón de descarga.
+
+::first-letter: Este pseudoelemento se utiliza para aplicar estilos a la primera letra de un elemento. Por ejemplo, se puede aumentar el tamaño de la primera letra de un párrafo.
+
+::first-line: Este pseudoelemento se utiliza para aplicar estilos a la primera línea de un elemento. Por ejemplo, se puede cambiar el color de la primera línea de un párrafo.
+
+Los pseudoelementos son útiles para aplicar estilos específicos a partes de un elemento sin tener que agregar elementos adicionales al HTML. Se utilizan comúnmente para agregar contenido decorativo, como flechas o íconos, o para estilizar el primer carácter o la primera línea de un bloque de texto. También pueden ser útiles para aplicar estilos específicos a elementos que no tienen un selector CSS adecuado, como la primera letra de un párrafo o la primera línea de un bloque de texto. */
+
+
+.menu-nav__item a::after {
+    content: ' | ';
+}
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPalacio - {% block title %}{% endblock %}</title> <!--Titulo dinámico-->
+</head>
+
+<body>
+    <header>
+        <!-- Para modularizar con Blueprint se debe indicar en el endpoint 'base.función que maneja la ruta', ya que
+    'base' es la variable con la que indicamos la función Blueprint en views.py -->
+        <a href="{{url_for('base.home')}}">Inicio</a>
+        <a href="{{url_for('base.portafolio')}}">Portafolio</a>
+        <a href="{{url_for('base.contact')}}">Contacto</a>
+        <a href="{{url_for('project.index')}}">Proyectos</a>
+        <!-- <a href="{{url_for('project.create')}}">Nuevo</a> -->
+    </header>
+
+    <!-- Contenido Dinámico -->
+    {% block content %}
+
+    {% endblock %}
+
+
+    <footer>
+        pie de página
+    </footer>
+</body>
+
+</html>

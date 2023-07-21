@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Blog Personal{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media-query.css' %}">
+</head>
+
+<body {% block class %} {% endblock %}>
+
+    <header class="header">
+        <div class="social">
+            <div class="social-icons">
+                <a target="_blank" href=""><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href=""><i class="fab fa-youtube"></i></a>
+                <a target="_blank" href=""><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href=""><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href=""><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-logo">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="Logo de la Pagina">
+                </a>
+            </div>
+            <div class="nav-link">
+                <a href="{% url 'profile' %}">Sobre mí</a>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+
+    {% block contact %}
+    <section class="section-contact">
+        <div class="contact">
+            <img src="{% static 'img/013-newsletter.png' %}" alt="icono de contacto">
+            <div class="contact-info">
+                <a href="">Contacto</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="contact">
+            <img src="{% static 'img/006-like.png' %}" alt="icomo para escribir reseña">
+            <div class="contact-info">
+                <a href="">Escribe</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+
+
+    {% block footer %}
+    <footer>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </footer>
+    {% endblock %}
+
+</body>
+
+</html>

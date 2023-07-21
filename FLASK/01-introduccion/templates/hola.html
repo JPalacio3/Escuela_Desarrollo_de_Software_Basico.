@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar datos por URL</title>
+</head>
+
+<body>
+
+    {% if nombre != None and edad == None %}
+    <h2>Hola {{nombre}}</h2>
+    {% elif nombre != None and edad != None %}
+    <h2>Tu nombre es {{nombre}} y Tienes {{edad}} años</h2>
+    {% endif %}
+
+
+</body>
+
+</html>

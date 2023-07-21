@@ -1,0 +1,71 @@
+.menu {
+    background-color: #13A4A4;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0 20px 30px;
+    padding-right: 5px;
+    margin: 10px 0 20px 30px;
+    margin-right: 5px;
+
+}
+.menu-nav {
+    color:red;
+    list-style: none;
+}
+
+.menu-nav__item {
+    display: inline-block;
+}
+
+.menu-nav__item a {
+    color: green;
+    text-decoration: none;
+}
+
+
+.menu-nav__item a:hover {
+    color: #0400ff;
+}
+
+
+.menu-nav__item a:active {
+    color: #7bff00;
+}
+
+
+
+.menu-nav__item a::after {
+    content: ' | ';
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+    height: 300px;
+    border: 10px solid green;
+    padding: 85px 35px;
+}
+
+
+
+/* El modelo de cajas en CSS se refiere a cómo se renderiza un elemento HTML en una página web. Cada elemento en HTML se representa como una caja rectangular que contiene contenido, relleno (padding), borde (border) y margen (margin). Estos cuatro elementos juntos forman el modelo de cajas de un elemento.
+
+El contenido es el área dentro de la caja que contiene el texto, imágenes y otros elementos HTML. El relleno es el espacio entre el contenido y el borde, que puede ser usado para crear espacio en blanco alrededor del contenido. El borde es la línea que rodea la caja y se utiliza para separar el contenido del relleno y el margen. El margen es el espacio entre la caja y el elemento adyacente.
+
+El modelo de cajas de CSS es importante porque permite a los desarrolladores web controlar el aspecto y el diseño de los elementos HTML en una página. Se pueden aplicar estilos de CSS para modificar los atributos de la caja, como el tamaño, el color, la fuente y la posición. También es útil para el diseño web receptivo, ya que se pueden aplicar estilos diferentes en función del tamaño de la pantalla y el dispositivo utilizado para acceder a la página web.
+Además de los elementos básicos de la caja (contenido, relleno, borde y margen), hay algunas características adicionales del modelo de cajas en CSS que son importantes de conocer:
+
+Box-sizing: Esta propiedad de CSS permite controlar cómo se calcula el ancho y el alto de una caja. El valor predeterminado es "content-box", lo que significa que el ancho y el alto se calculan sólo en función del contenido. Pero también existe el valor "border-box", que incluye tanto el borde como el relleno en el cálculo del ancho y el alto.
+
+Overflow: Esta propiedad de CSS controla qué sucede cuando el contenido de una caja es demasiado grande para la caja. El valor predeterminado es "visible", lo que significa que el contenido se muestra fuera de la caja. Pero también existen los valores "hidden", que recorta el contenido que sobresale de la caja, y "scroll", que agrega barras de desplazamiento para permitir que el usuario se desplace a través del contenido que no cabe en la caja.
+
+Display: Esta propiedad de CSS controla cómo se muestra una caja en la página. El valor predeterminado es "block", lo que significa que la caja ocupa todo el ancho disponible en su contenedor y aparece en una nueva línea. Pero también existen los valores "inline", que muestra la caja en línea con el contenido que la rodea, y "inline-block", que muestra la caja como un elemento en línea con la capacidad de tener un ancho y un alto.
+
+Float: Esta propiedad de CSS controla cómo se alinean las cajas en la página. El valor predeterminado es "none", lo que significa que la caja se muestra en línea con el contenido que la rodea. Pero también existe el valor "float", que permite que la caja se "flote" a la izquierda o a la derecha de su contenedor, permitiendo que otras cajas aparezcan alrededor de ella.*/

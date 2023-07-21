@@ -1,0 +1,18 @@
+* {
+    font-size: 25px;
+}
+
+
+/* Listas desordenadas */
+
+ul {
+    list-style: circle;
+
+}
+
+
+/* listas ordenadas  */
+
+ol {
+    list-style: upper-roman;
+}

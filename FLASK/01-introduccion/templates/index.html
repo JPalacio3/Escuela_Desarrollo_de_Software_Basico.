@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templates HTML</title>
+</head>
+
+<body>
+    <h1>Mi Web con Flask</h1>
+    <p>{{msm}}</p>
+
+    <!-- Agregar archivos estáticos: -->
+    <!-- IMÁGENES -->
+    <img src="{{ url_for('static', filename = '../static/img/logo.png') }}" alt="logo de flask" width="1000">
+
+    <!-- ENLACES A OTRAS PÁGINAS -->
+    <!-- en el Url_for() es importante recordar que lo que se definde dentro del paréntesis es el nombre de la función que está asociada a ese renderizado de la vista y no el nombre del archivo html  -->
+    <a href="{{url_for('blog')}}"> Ir a Blogs</a>
+
+
+</body>
+
+</html>
