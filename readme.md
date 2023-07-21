@@ -15,4 +15,4 @@ En este repositorio de Notion se encuentran mis apuntes relacionados a estudios 
 
 <img src="/HTML/img/Captura.PNG" alt="imagen de muestra libro de Notion" width="800">
 "# Escuela_Desarrollo_de_Software_Basico"
-"# Escuela_Desarrollo_de_Software_Basico."  git init git add README.md git commit -m "first commit" git branch -M master git remote add origin https://github.com/JPalacio3/Escuela_Desarrollo_de_Software_Basico..git git push -u origin master
+"# Escuela_Desarrollo_de_Software_Basico."
