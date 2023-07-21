@@ -28,7 +28,7 @@ func Saludar(rw http.ResponseWriter, r *http.Request) {
 	// Obtener un valor mediante su clave en URL
 	name := r.URL.Query().Get("name")
 	age := r.URL.Query().Get("age")
-	fmt.Fprintf(rw, "Hola %s tu edad es %s !!", name, age)
+	fmt.Fprintf(rw, "Hola %s tu edad es %s !!, saludos", name, age)
 
 	// http.Error(rw, "Este es un error", http.StatusNotFound)
 }
