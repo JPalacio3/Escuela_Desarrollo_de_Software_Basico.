@@ -11,18 +11,42 @@ import (
 type Usuario struct {
 	UserName string
 	Edad     int
+	Activo   bool
+	Admin    bool
+	Curso    []Curso
+}
+
+type Curso struct {
+	Nombre string
+}
+
+// Funciones
+func Saludar() string {
+	return "Hola desde una función"
 }
 
 // handler
 func Index(rw http.ResponseWriter, r *http.Request) {
-	//fmt.Fprintln(rw, "Hola mundo")
-	template, err := template.ParseFiles("index.html")
 
-	usuario := Usuario{"Joel", 33}
+	funciones := template.FuncMap{
+		"saludar": Saludar,
+	}
+
+	// c1 := Curso{"GO"}
+	// c2 := Curso{"Python"}
+	// c3 := Curso{"Java"}
+	// c4 := Curso{"Javascript"}
+
+	//fmt.Fprintln(rw, "Hola mundo")
+	template, err := template.New("Index.html").Funcs(funciones).ParseFiles("index.html")
+
+	// cursos := []Curso{c1, c2, c3, c4}
+	// usuario := Usuario{"Joel", 33, true, true, cursos}
+
 	if err != nil {
 		panic(err)
 	} else {
-		template.Execute(rw, usuario)
+		template.Execute(rw, nil)
 	}
 
 }

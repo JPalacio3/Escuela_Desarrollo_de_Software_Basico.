@@ -8,22 +8,56 @@
 </head>
 
 <body>
-    <h1>Hola mundo</h1>
 
+    <h1>Usuarios</h1>
+    <!-- Operadores lógicos
+    not !
+    and &&
+    or ||
+-->
 
-    <h2>Usuarios</h2>
-    <h3>Hola {{.UserName}}</h3>
-    <p>Tu edad es de : {{.Edad}}</p>
-    <p>que tengas un excelente día</p>
-    <p>Una vez que está corriendo el servidor, no es necesario detenerlo, con refresh es suficiente para que se
-        actualice el navegador los cambios</p>
-
-
-    <!-- variables -->
-    {{ with $valor := "Mi variable" }}
-    <p>{{$valor}}</p>
+    {{ if  .Activo }}
+    <p>El usuario está activo en la plataforma</p>
+    {{ else }}
+    <p>El usuario se encuentra inactivo</p>
     {{ end }}
 
+    {{ if and .Activo .Admin }}
+    <p>El usuario está activo y también es administrador</p>
+    {{ else }}
+    <p>El usuario NO está activo o NO es administrador</p>
+    {{ end }}
+
+    {{ if or .Activo .Admin }}
+    <p>El usuario está activo y también es administrador</p>
+    {{ else }}
+    <p>El usuario NO está activo o NO es administrador</p>
+    {{ end }}
+
+    <!--
+    Operadores condicionales
+    eq ==
+    ne !=
+    lt < le <=gt>
+    ge >= -->
+    {{ if gt .Edad 22 }}
+    <p>El Usuario tiene más de 22 años</p>
+    {{ else }}
+    <p>El Usuario es menor de 22 años</p>
+    {{end }}
+
+    <h2>Bucles</h2>
+    <ul>
+        {{ range .Curso }}
+        <li>{{ .Nombre }}</li>
+        {{ end }}
+    </ul>
+
+    <!-- Ejecutar la función -->
+
+    <p>
+        {{ saludar }}
+    </p>
 
 </body>
 
