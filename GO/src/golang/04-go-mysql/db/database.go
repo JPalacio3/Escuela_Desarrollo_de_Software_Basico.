@@ -36,7 +36,48 @@ func Ping() {
 	}
 }
 
+// Verificar si una tabla existe
+func ExistTable(tableName string) bool {
+	sql := fmt.Sprintf("SHOW TABLES LIKE '%s'", tableName)
+	rows, err := db.Query(sql)
+
+	if err != nil {
+		println("Error:", err)
+	}
+	return rows.Next()
+}
+
 // Crea una tabla
-func CreateTable(schema string) {
-	db.Exec(schema)
+func CreateTable(schema string, name string) {
+
+	if !ExistTable(name) {
+		_, err := db.Exec(schema)
+		if err != nil {
+			fmt.Println(err)
+		}
+	}
+}
+
+// Polimorfismo de Exec
+func Exec(query string, args ...interface{}) (sql.Result, error) {
+	result, err := db.Exec(query, args...)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return result, err
+}
+
+// Reiniciar el registro de una tabla con Truncate
+func TrancateTable(tableName string) {
+	sql := fmt.Sprintf("TRUNCATE %s", tableName)
+	Exec(sql)
+}
+
+// Polimorfizando el Query
+func Query(query string, args ...interface{}) (*sql.Rows, error) {
+	rows, err := db.Query(query, args...)
+	if err != nil {
+		fmt.Println(err)
+	}
+	return rows, err
 }
