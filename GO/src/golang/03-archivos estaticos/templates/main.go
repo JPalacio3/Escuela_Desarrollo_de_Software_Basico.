@@ -38,7 +38,7 @@ func renderTemplate(rw http.ResponseWriter, name string, data interface{}) {
 
 // Handlers
 func Index(rw http.ResponseWriter, r *http.Request) {
-	usuario := Usuario{"Alex", 26}
+	usuario := Usuario{"Joel", 26}
 	renderTemplate(rw, "index.html", usuario)
 }
 

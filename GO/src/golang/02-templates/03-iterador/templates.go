@@ -7,7 +7,7 @@ import (
 	"text/template"
 )
 
-//Estructuras
+// Estructuras
 type Usuario struct {
 	UserName string
 	Edad     int
@@ -30,7 +30,7 @@ func Index(rw http.ResponseWriter, r *http.Request) {
 	c4 := Curso{"JavaScript"}
 
 	cursos := []Curso{c1, c2, c3, c4}
-	usuario := Usuario{"Alex", 26, true, false, cursos}
+	usuario := Usuario{"Joel", 26, true, false, cursos}
 	template, err := template.ParseFiles("index.html")
 	if err != nil {
 		panic(err)
@@ -39,7 +39,7 @@ func Index(rw http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//Función principal
+// Función principal
 func main() {
 
 	//Mux

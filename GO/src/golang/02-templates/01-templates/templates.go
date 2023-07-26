@@ -17,7 +17,7 @@ type Usuario struct {
 func Index(rw http.ResponseWriter, r *http.Request) {
 	template, err := template.ParseFiles("index.html")
 
-	usuario := Usuario{"Alex", 26}
+	usuario := Usuario{"", 26}
 
 	if err != nil {
 		panic(err)

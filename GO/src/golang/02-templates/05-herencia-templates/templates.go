@@ -7,18 +7,18 @@ import (
 	"net/http"
 )
 
-//Estructuras
+// Estructuras
 type Usuario struct {
 	UserName string
 	Edad     int
 }
 
-//Handlers
+// Handlers
 func Index(rw http.ResponseWriter, r *http.Request) {
 	//template, err := template.ParseFiles("index.html", "base.html")
 	template, err := template.New("index.html").ParseFiles("index.html", "base.html")
 
-	usuario := Usuario{"Alex", 26}
+	usuario := Usuario{"Joel", 26}
 
 	if err != nil {
 		panic(err)
@@ -27,7 +27,7 @@ func Index(rw http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//Función principal
+// Función principal
 func main() {
 
 	//Mux

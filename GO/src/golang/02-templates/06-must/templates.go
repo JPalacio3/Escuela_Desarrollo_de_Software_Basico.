@@ -7,13 +7,13 @@ import (
 	"net/http"
 )
 
-//Estructuras
+// Estructuras
 type Usuario struct {
 	UserName string
 	Edad     int
 }
 
-//Handlers
+// Handlers
 func Index(rw http.ResponseWriter, r *http.Request) {
 	//template, err := template.ParseFiles("index.html", "base.html")
 	template := template.Must(
@@ -23,13 +23,13 @@ func Index(rw http.ResponseWriter, r *http.Request) {
 				"base.html",
 			))
 
-	usuario := Usuario{"Alex", 26}
+	usuario := Usuario{"Joel", 26}
 
 	template.Execute(rw, usuario)
 
 }
 
-//Función principal
+// Función principal
 func main() {
 
 	//Mux

@@ -7,18 +7,18 @@ import (
 	"net/http"
 )
 
-//Estructuras
+// Estructuras
 type Usuario struct {
 	UserName string
 	Edad     int
 }
 
-//var templates = template.Must(template.New("T").ParseGlob("templates/*.html"))
+// var templates = template.Must(template.New("T").ParseGlob("templates/*.html"))
 var templates = template.Must(template.New("T").ParseGlob("templates/**/*.html"))
 
-//Handlers
+// Handlers
 func Index(rw http.ResponseWriter, r *http.Request) {
-	usuario := Usuario{"Alex", 26}
+	usuario := Usuario{"Joel", 26}
 	err := templates.ExecuteTemplate(rw, "index.html", usuario)
 
 	if err != nil {
@@ -27,7 +27,7 @@ func Index(rw http.ResponseWriter, r *http.Request) {
 }
 
 func Registro(rw http.ResponseWriter, r *http.Request) {
-	//usuario := Usuario{"Alex", 26}
+	//usuario := Usuario{"Joel", 26}
 	err := templates.ExecuteTemplate(rw, "registro.html", nil)
 
 	if err != nil {
@@ -35,7 +35,7 @@ func Registro(rw http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//Función principal
+// Función principal
 func main() {
 
 	//Mux

@@ -7,7 +7,7 @@ import (
 	"text/template"
 )
 
-//Estructuras
+// Estructuras
 type Usuario struct {
 	UserName string
 	Edad     int
@@ -15,10 +15,10 @@ type Usuario struct {
 	Admin    bool
 }
 
-//Handlers
+// Handlers
 func Index(rw http.ResponseWriter, r *http.Request) {
 	template, err := template.ParseFiles("index.html")
-	usuario := Usuario{"Alex", 26, true, false}
+	usuario := Usuario{"Joel", 26, true, false}
 
 	if err != nil {
 		panic(err)
@@ -27,7 +27,7 @@ func Index(rw http.ResponseWriter, r *http.Request) {
 	}
 }
 
-//Función principal
+// Función principal
 func main() {
 
 	//Mux

@@ -7,25 +7,25 @@ import (
 	"net/http"
 )
 
-//Estructuras
+// Estructuras
 type Usuario struct {
 	UserName string
 	Edad     int
 }
 
-//var templates = template.Must(template.New("T").ParseGlob("templates/*.html"))
+// var templates = template.Must(template.New("T").ParseGlob("templates/*.html"))
 var templates = template.Must(template.New("T").ParseGlob("templates/**/*.html"))
 
-//Error template
+// Error template
 var errorTemplate = template.Must(template.ParseFiles("templates/error/error.html"))
 
-//Handlear Error
+// Handlear Error
 func handlerError(rw http.ResponseWriter, status int) {
 	rw.WriteHeader(status)
 	errorTemplate.Execute(rw, nil)
 }
 
-//Funcion de Render Template
+// Funcion de Render Template
 func renderTemplate(rw http.ResponseWriter, name string, data interface{}) {
 	err := templates.ExecuteTemplate(rw, name, data)
 
@@ -36,9 +36,9 @@ func renderTemplate(rw http.ResponseWriter, name string, data interface{}) {
 	}
 }
 
-//Handlers
+// Handlers
 func Index(rw http.ResponseWriter, r *http.Request) {
-	usuario := Usuario{"Alex", 26}
+	usuario := Usuario{"Joel", 26}
 	renderTemplate(rw, "index.html", usuario)
 }
 
@@ -46,7 +46,7 @@ func Registro(rw http.ResponseWriter, r *http.Request) {
 	renderTemplate(rw, "registro.html", nil)
 }
 
-//Función principal
+// Función principal
 func main() {
 
 	//Mux
