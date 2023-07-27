@@ -60,24 +60,30 @@ func CreateTable(schema string, name string) {
 
 // Polimorfismo de Exec
 func Exec(query string, args ...interface{}) (sql.Result, error) {
+	Connect()
 	result, err := db.Exec(query, args...)
+	Close()
+
 	if err != nil {
 		fmt.Println(err)
 	}
 	return result, err
 }
 
-// Reiniciar el registro de una tabla con Truncate
-func TrancateTable(tableName string) {
-	sql := fmt.Sprintf("TRUNCATE %s", tableName)
-	Exec(sql)
-}
-
 // Polimorfizando el Query
 func Query(query string, args ...interface{}) (*sql.Rows, error) {
+	Connect()
 	rows, err := db.Query(query, args...)
+	Close()
+
 	if err != nil {
 		fmt.Println(err)
 	}
 	return rows, err
+}
+
+// Reiniciar el registro de una tabla con Truncate
+func TrancateTable(tableName string) {
+	sql := fmt.Sprintf("TRUNCATE %s", tableName)
+	Exec(sql)
 }
