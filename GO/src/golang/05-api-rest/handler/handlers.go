@@ -6,6 +6,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 // Handler para obtener todos los usuarios
@@ -38,20 +41,80 @@ func GetUsers(rw http.ResponseWriter, r *http.Request) {
 
 // Handler para obtener un único usuario
 func GetUser(rw http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(rw, "Obtiene un único usuario")
+	// fmt.Fprintln(rw, "Lista todos los usuarios")
+	rw.Header().Set("Content-type", "application/json")
+
+	// Obteber id
+	vars := mux.Vars(r) // Obtenemos un mapa de las variables de la URL registradas en el router.
+	/*
+	   Obtenemos el valor de la variable "id" del mapa de variables.
+	   Esta variable contiene el valor de "id" en formato de cadena (string).
+	   Utilizamos strconv.Atoi() para convertir el valor a un número entero (int).
+	   El guión bajo "_" se utiliza para ignorar el segundo valor de retorno (el error).
+	*/
+	userId, _ := strconv.Atoi(vars["id"])
+	db.Connect()
+	user := models.GetUser(userId)
+	db.Close()
+	output, _ := json.Marshal(user)
+	fmt.Fprintln(rw, string(output))
 }
 
 // Handler para crear un  usuario
 func CreateUser(rw http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(rw, "Permite crear un usuario")
+	// fmt.Fprintln(rw, "Permite crear un usuario")
+	rw.Header().Set("Content-type", "application/json")
+	// Obteber Todo el registro
+	user := models.User{}
+	decoder := json.NewDecoder(r.Body)
+
+	if err := decoder.Decode(&user); err != nil {
+		fmt.Fprintln(rw, http.StatusUnprocessableEntity)
+	} else {
+		db.Connect()
+
+		user.Save()
+
+		db.Close()
+	}
+
+	output, _ := json.Marshal(user)
+	fmt.Fprintln(rw, string(output))
+
 }
 
 // Handler para eliminar un  usuario
 func DeleteUser(rw http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(rw, "Permite eliminar un usuario")
+	// fmt.Fprintln(rw, "Lista todos los usuarios")
+	rw.Header().Set("Content-type", "application/json")
+	// Obteber id
+	vars := mux.Vars(r) // Obtenemos un mapa de las variables de la URL registradas en el router.
+	userId, _ := strconv.Atoi(vars["id"])
+	db.Connect()
+
+	user := models.GetUser(userId)
+	user.Delete()
+
+	db.Close()
+	output, _ := json.Marshal(user)
+	fmt.Fprintln(rw, string(output))
 }
 
 // Handler para actualizar un  usuario
 func UpdateUser(rw http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(rw, "Permite crear un usuario")
+	// fmt.Fprintln(rw, "Permite crear un usuario")
+	rw.Header().Set("Content-type", "application/json")
+	// Obteber Todo el registro
+	user := models.User{}
+	decoder := json.NewDecoder(r.Body)
+
+	if err := decoder.Decode(&user); err != nil {
+		fmt.Fprintln(rw, http.StatusUnprocessableEntity)
+	} else {
+		db.Connect()
+
+		user.Save()
+
+		db.Close()
+	}
 }
