@@ -25,4 +25,4 @@ Ingrese su nombre: Joel
 Ingrese su edad: 33
 Ingrese un caracter: Joel
 NOMBRE: Joel EDAD: 33 Caracter: J
- */
+*/
