@@ -18,6 +18,5 @@ public class Arrays {
         int[] array1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         System.out.println(array1[5]); // 6
         System.out.println(array1.length); // 10
-
     }
 }

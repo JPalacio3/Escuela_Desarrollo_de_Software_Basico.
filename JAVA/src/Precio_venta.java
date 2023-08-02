@@ -23,7 +23,6 @@ public class Precio_venta {
         System.out.println("IGV : " + igv);
         System.out.println("Precio de Venta : " + pv);
 
-
         leer.close();
     }
 }

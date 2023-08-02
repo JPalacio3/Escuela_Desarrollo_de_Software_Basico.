@@ -37,7 +37,6 @@ public class SwitchCase {
             default:
                 nombreDia = " [Número Inválido], escriba un número del 1 al 7 ";
         }
-
         System.out.println("El día de la semana seleccionado es " + nombreDia);
 
         leer.close();

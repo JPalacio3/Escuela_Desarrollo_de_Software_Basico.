@@ -9,7 +9,7 @@ public class BucleWhile {
         //     c++;
         // }
 
-        // Tabla de multiplicar
+        // Tabla de multiplicar:
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese un número para mostrar su tabla de multiplicar: ");
         int n = leer.nextInt();

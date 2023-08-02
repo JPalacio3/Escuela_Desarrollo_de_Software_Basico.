@@ -25,7 +25,6 @@ public class Esvocal {
         leer.close();
     }
 }
-
 /*
 En Java, la comparación de cadenas con el operador == compara las referencias de objetos y no los valores de las cadenas. Para comparar el contenido de las cadenas, debes utilizar el método equals().
 

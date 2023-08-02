@@ -20,7 +20,6 @@ public class SalidaDatos {
         leer.close();
     }
 }
-
 /*
 Ingrese su nombre: Joel
 Ingrese su edad: 33

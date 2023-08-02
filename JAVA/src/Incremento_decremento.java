@@ -36,6 +36,5 @@ public class Incremento_decremento {
         System.out.println(c--); // 3
         System.out.println(c--); // 2
         System.out.println(c); // 1
-
     }
 }

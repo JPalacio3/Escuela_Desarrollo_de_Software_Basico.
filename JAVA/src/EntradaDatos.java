@@ -21,7 +21,6 @@ public class EntradaDatos {
             leer.close();
         }
     }
-
     /*
     Ingrese su nombre:
         Joel

@@ -1,5 +1,4 @@
 public class DoWhile {
-
     public static void main(String[] args) {
 
         int c = 0;

@@ -52,7 +52,6 @@ public class Multidimensional {
         9
         */
 
-
         // ARRAY TRIDIMENSIONAL
         int [][][] z = {
             {
@@ -70,7 +69,6 @@ public class Multidimensional {
                     System.out.println(dato);
             }
         }
-
         /*
         SALIDA:
         1
@@ -86,7 +84,6 @@ public class Multidimensional {
         -5
         -6
         */
-
     }
 }
 

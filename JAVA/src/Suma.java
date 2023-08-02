@@ -11,6 +11,7 @@ public class Suma {
         int b = leer.nextInt();
 
         int r = a + b;
+
         System.out.printf("La suma de %d + %d es : %d\n", a, b, r);
 
         leer.close();

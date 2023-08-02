@@ -7,6 +7,7 @@ public class BreakContinue {
             if (i == 5) {
                 System.out.println("\nEn este punto se hace un salto a la siguiente iteraci\u00F3n");
                 continue;
+
             } else {
                 if (i == 10) {
                     System.out.println("\nEn este punto la función es detenida");
