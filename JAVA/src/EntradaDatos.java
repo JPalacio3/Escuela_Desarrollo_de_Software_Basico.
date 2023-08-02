@@ -17,6 +17,8 @@ public class EntradaDatos {
 
             System.out.println("Su Nombre es: " + nombre + ". Y su edad es: " + edad + " años");
             System.out.println("Caracter: " + c);
+
+            leer.close();
         }
     }
 

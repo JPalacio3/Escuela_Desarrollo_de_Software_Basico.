@@ -17,6 +17,7 @@ public class SalidaDatos {
         System.out.printf("NOMBRE: %s EDAD: %d", nombre, edad );
         System.out.print(" Caracter: " + c);
 
+        leer.close();
     }
 }
 

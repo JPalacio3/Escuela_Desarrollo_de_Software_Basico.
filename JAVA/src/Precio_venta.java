@@ -1,4 +1,3 @@
-package Precio_venta;
 
 // CALCULAR EL PRECIO DE VENTA RECIBIENDO LA ENTRADA DEL VALOR DE LA VENTA Y CON UN IGV DE 18%
 
@@ -23,5 +22,8 @@ public class Precio_venta {
         System.out.println("Valor de Venta : " + vv);
         System.out.println("IGV : " + igv);
         System.out.println("Precio de Venta : " + pv);
+
+
+        leer.close();
     }
 }

@@ -1,6 +1,4 @@
 public class Incremento_decremento {
-
-
     public static void main(String[] args)
     {
         int c = 1;
