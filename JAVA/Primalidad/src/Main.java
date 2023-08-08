@@ -40,7 +40,7 @@ public class Main {
 
             if (numero % i == 0) {
                 contador++;
-        }
+            }
 
         }
 
