@@ -10,9 +10,9 @@ public class Main {
             System.out.println("===== CONVERSOR DE MONEDAS =====");
             System.out.println(
                     "1 - Soles Peruanos a Dólares\n" +
-                    "2 - Pesos Mexicanos a Dólares\n" +
-                    "3 - Pesos Colombianos a Dólares\n" +
-                    "4 - Salir" );
+                            "2 - Pesos Mexicanos a Dólares\n" +
+                            "3 - Pesos Colombianos a Dólares\n" +
+                            "4 - Salir");
 
             System.out.print("SELECCIONE UNA OPCIÓN: ");
             char opcion = leer.next().charAt(0);
@@ -29,13 +29,13 @@ public class Main {
                     break;
                 case '4':
                     System.out.println(" CERRANDO PROGRAMA");
-                    leer.close(); // Cerrar Scanner aquí
                     break EXTERNA;
                 default:
                     System.out.println("OPCIÓN INCORRECTA");
                     break;
             }
         }
+        leer.close(); // Cerrar Scanner aquí al final del método main
     }
 
     static void convertir(double valorDolar, String pais) {
@@ -49,5 +49,6 @@ public class Main {
         System.out.println("======================================");
         System.out.println("||     Tienes $ " + dolares + " Dólares     ||");
         System.out.println("======================================");
+
     }
 }
