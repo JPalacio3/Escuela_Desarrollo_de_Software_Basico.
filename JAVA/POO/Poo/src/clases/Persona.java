@@ -4,6 +4,14 @@ public class Persona {
     public String nombre;
     public int edad;
 
+    public Persona() {
+        System.out.println("Construyendo el constructor");
+    }
+
+    public Persona(String nombre) {
+        System.out.println("Hola " + nombre + " Desde el constructor");
+    }
+
     /**
      * @autor Jpalacio
      * @param Este método permite mostrar los datos de nombre y edad de una persona
