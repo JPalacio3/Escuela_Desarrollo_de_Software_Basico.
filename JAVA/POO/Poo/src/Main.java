@@ -17,8 +17,8 @@ public class Main {
     public static void main(String[] args) {
 
         // Constructor de la clase Persona
-        Persona persona3 = new Persona();
-        Persona persona4 = new Persona("Joel");
+        // Persona persona3 = new Persona();
+        // Persona persona4 = new Persona("Joel");
         Persona persona5 = new Persona();
         persona5.nombre = "Joel Alberto";
         persona5.edad = 33;
